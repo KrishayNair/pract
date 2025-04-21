@@ -1,0 +1,15 @@
+import socket
+
+client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+client.connect(('localhost', 5000))
+print("Connected!")
+
+while True:
+    num = input("Enter number (or 'stop' to end): ")
+    client.send(num.encode())
+    if num == "stop":
+        break
+
+result = client.recv(1024).decode()
+print("Sum of numbers:", result)
+client.close() 
