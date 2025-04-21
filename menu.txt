@@ -1,0 +1,9 @@
+RPC :- rpcclient and rpcserver
+RMI :- rmiclient and rmiserver
+group :- groupclient and groupserver
+distributed :- distributedclient and distributedserver
+inter :- interclient and interserver
+election :- bully and ring
+berkeley (clock synchronization):- clock
+mutual exclusion :- raymond and ricart
+load balancing :- load
